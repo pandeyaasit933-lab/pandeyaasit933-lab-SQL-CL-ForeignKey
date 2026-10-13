@@ -1,0 +1,20 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/CreateTableWithForeignKeyTest.java",
+      "testCases": [
+        {
+          "methodName": "problem1Test",
+          "label": "Verify foreign key table allows valid inserts",
+          "description": "Runs problem1() to create the site_user and post tables with a foreign key constraint, then attempts to insert a post referencing user ID 1. Test passes if no exception is thrown."
+        },
+        {
+          "methodName": "problem1TestRefIntegrity",
+          "label": "Verify foreign key constraint prevents invalid inserts",
+          "description": "Runs problem1() to set up the foreign key constraint, then attempts to insert a post referencing nonexistent user ID 100. Test passes only if a foreign key violation exception is thrown."
+        }
+      ]
+    }
+  ]
+}
